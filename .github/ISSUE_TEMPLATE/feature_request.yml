@@ -1,0 +1,30 @@
+# .github/ISSUE_TEMPLATE/feature_request.yml
+name: 💡 Feature Request
+description: Suggest a new feature or enhancement
+labels: [enhancement]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Feature Summary
+      placeholder: e.g., Add recurring transactions support
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why is this needed?
+      description: Explain the problem or benefit
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe how this could be implemented
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High

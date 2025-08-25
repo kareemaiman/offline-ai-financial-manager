@@ -1,0 +1,22 @@
+# .github/ISSUE_TEMPLATE/schema_change.yml
+name: 🗄️ Schema / Database Change
+description: Propose a change to the SQLite schema
+labels: [database]
+body:
+  - type: input
+    id: table
+    attributes:
+      label: Affected Table(s)
+      placeholder: e.g., transactions, debts
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed Change
+      placeholder: e.g., Add "interest_rate" column to debts
+    validations:
+      required: true
+  - type: textarea
+    id: migration
+    attributes:
+      label: Migration Plan
+      description: How to handle existing data?
