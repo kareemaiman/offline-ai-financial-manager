@@ -11,5 +11,5 @@ This project is community-driven. Contributions of all kinds are welcome: code, 
 1. Fork this repo on GitHub.  
 2. Clone your fork:  
    ```bash
-   git clone https://github.com/YOUR-USERNAME/finance-app.git
+   git clone https://github.com/kareemaiman/offline-ai-financial-manager.git
    cd finance-app
