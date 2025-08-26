@@ -6,51 +6,53 @@
 ---
 
 ## 🚀 Vision
-A **personal finance OS** that works entirely on your phone — no cloud, no trackers, no lock-in.  
-It listens to bank SMS, auto-extracts transactions with a local AI, categorizes them into income/expenses/investments/debt, and gives you **actionable financial insights** — all **offline**.
+A **personal finance OS** that works entirely on your device — no cloud, no trackers, no lock-in.  
+
+- Listens to **bank SMS/notifications**.  
+- Auto-extracts transactions with a **local AI**.  
+- Categorizes them into **income, expenses, investments, and debt**.  
+- Provides **actionable financial insights** — all **offline**.  
 
 When you want extras (currency rates, stock quotes, Drive sync), they’re **optional** and **opt-in**.
 
 ---
 
-## ✨ Features (planned)
+## ✨ Features (Planned)
 
 ### ✅ Phase 1 – Core (MVP)
-- Multi-currency support (base + foreign balances).  
-- Offline SQLite database (SQLCipher encrypted).  
-- Auto-parse bank SMS/notifications → structured transactions.  
-- Categorization: Income, Expense, Investment, Debt (with sub-categories).  
-- Debt management: avalanche/snowball payoff strategies.  
-- Budgeting & spending analytics (charts in Flutter).  
-- Net worth calculator (assets – liabilities).  
+- Multi-user + multi-currency support.  
+- Encrypted SQLite database (SQLCipher).  
+- AI-powered SMS/notification parsing.  
+- Categorization: Income / Expense / Debt / Investment.  
+- Debt optimizer (avalanche & snowball).  
+- Budgeting, analytics & net worth calculator.  
 - Biometric/passcode lock.  
 
 ### 🔜 Phase 2 – Optional Online
 - FX rates (API, cached offline).  
-- Stock/ETF tracker (API, cached offline).  
-- Investment P/L calculations.  
+- Stock/ETF tracker & P/L.  
 - Export reports (CSV, PDF).  
 
 ### 🔜 Phase 3 – Multi-User & Sync
-- Multiple user vaults on one device.  
-- Peer linking without central server (Google Drive, WebDAV, personal server).  
+- Multiple user vaults per device.  
+- Peer-to-peer sync (Google Drive, WebDAV, personal server).  
 - End-to-end encrypted sync (CRDT patch format).  
 - Shared budgets & accounts.  
 
 ### 🔜 Phase 4 – Advanced
-- Tax management (regional packs, capital gains, deductions, **optional Zakat module**).  
+- Tax management (regional packs + optional **Zakat module**).  
 - Subscription tracking & anomaly detection.  
 - Voice input: “Add 200 EGP groceries.”  
-- Community packs: Bank SMS templates, tax rules, localization.  
+- Community-driven packs (Bank SMS regex, tax rules, localization).  
 
 ---
 
 ## 🧩 Tech Stack
 - **Flutter (Dart)** → UI & core logic.  
 - **SQLite (SQLCipher)** → encrypted local storage.  
-- **Local LLM (~1B params, quantized)** → SMS parsing & advice.  
+- **Local LLM (~1B params, quantized)** → SMS parsing & financial advice.  
 - **CRDT + E2E crypto** → offline-first sync & sharing.  
-- **Optional APIs** → FX, stocks, sync transports (Drive/WebDAV).  
+- **Optional APIs** → FX, stocks, cloud sync.  
 
 ---
 
@@ -64,46 +66,50 @@ When you want extras (currency rates, stock quotes, Drive sync), they’re **opt
 
 ---
 
+## ⚡ Quick Start (Development)
+
+```bash
+# 1. Clone repo
+git clone https://github.com/kareemaiman/offline-ai-financial-manager.git
+cd offline-ai-financial-manager
+
+# 2. Install dependencies
+flutter pub get
+
+# 3. Run app
+flutter run
+```
+---
+
 ## 🤝 Contributing
-This project is **open-source** and community-driven. Contributions are welcome:  
 
-- **Bank SMS Patterns** → Add regex/templates for your country’s banks.  
-- **Tax Rule Packs** → Submit tax logic for your region.  
-- **Localization** → Help translate into your language.  
-- **Code** → Core features, algorithms, bugfixes, UI polish.  
+We welcome all contributions!
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines (coming soon).  
+📌 Bug Reports & Feature Requests → Open an Issue
+
+🛠 Code Contributions → Fork + PR (see Pull Request Template
+)
+
+💬 Discussions → Join GitHub Discussions (coming soon)
+
+🌍 Localization / Bank SMS Packs → Add rules for your country
+
+📊 Tax Packs → Submit region-specific tax/Zakat rules
+
+See [CONTRIBUTING.md](https://github.com/kareemaiman/offline-ai-financial-manager/blob/main/CONTRIBUTING.md)
+ for details.
 
 ---
 
 ## 🔐 Security & Privacy
-- All data encrypted locally with SQLCipher.  
-- No telemetry, no third-party analytics.  
-- Optional online services are **opt-in** and encrypted end-to-end.  
-- Exported data (CSV/PDF) never leaves device unless user shares it.  
 
----
+All data encrypted locally with SQLCipher.
 
-## 📜 License
-- **MIT.  
+No telemetry, no third-party analytics.
 
----
+Optional online services are opt-in + encrypted end-to-end.
 
-## 🌍 Community
-- **Discussions** → GitHub Discussions (coming soon).  
-- **Issues** → Bug reports & feature requests.  
-- **Roadmap Board** → Public Kanban for milestones.  
+Reports (CSV/PDF) never leave the device unless you share them.
 
----
-
-## ⚡ Quick Start (dev)
-```bash
-# Clone repo
-git clone https://github.com/kareemaiman/offline-ai-financial-manager.git
-cd finance-app
-
-# Install dependencies
-flutter pub get
-
-# Run app
-flutter run
+🔒 See [SECURITY.md](https://github.com/kareemaiman/offline-ai-financial-manager/blob/main/SECURITY.md)
+ for our security policy and how to report vulnerabilities.
