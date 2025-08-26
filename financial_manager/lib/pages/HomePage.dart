@@ -6,7 +6,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[500],
       body: Center(child: const Text('Welcome to the Home Page!')),
     );
   }

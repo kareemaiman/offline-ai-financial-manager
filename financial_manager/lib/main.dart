@@ -1,5 +1,5 @@
 import 'package:financial_manager/WidgetTree.dart';
-import 'package:financial_manager/widgets/drawer.dart';
+import 'package:financial_manager/data/notifiers.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +11,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(drawer: CustomDrawer(), body: const WidgetTree()),
+    return ValueListenableBuilder(
+      valueListenable: darkMode,
+      builder: (context, value, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            brightness: value ? Brightness.dark : Brightness.light,
+          ),
+          home: Scaffold(body: const WidgetTree()),
+        );
+      },
     );
   }
 }

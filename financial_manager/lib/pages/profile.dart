@@ -6,7 +6,6 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[500],
       body: Wrap(
         children: [
           Column(
